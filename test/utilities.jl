@@ -51,3 +51,6 @@ for T in colorElementTypes
     @test linc1c2[22] == Gray(T(0.5))
     @test typeof(linc1c2) == Array{Gray{T},1}
 end
+
+# PR #288: vector construction in `interpolate_table` function
+@test colormatch(359.1)
